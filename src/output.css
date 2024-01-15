@@ -556,6 +556,10 @@ video {
   position: relative;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -564,20 +568,16 @@ video {
   right: 0px;
 }
 
-.top-0 {
-  top: 0px;
-}
-
 .right-\[0px\] {
   right: 0px;
 }
 
-.top-\[0px\] {
+.top-0 {
   top: 0px;
 }
 
-.bottom-0 {
-  bottom: 0px;
+.top-\[0px\] {
+  top: 0px;
 }
 
 .z-20 {
@@ -592,12 +592,12 @@ video {
   z-index: 40;
 }
 
-.float-right {
-  float: right;
-}
-
 .float-left {
   float: left;
+}
+
+.mb-\[20px\] {
+  margin-bottom: 20px;
 }
 
 .ml-\[15\.5px\] {
@@ -606,6 +606,14 @@ video {
 
 .ml-\[16px\] {
   margin-left: 16px;
+}
+
+.ml-\[25\.28px\] {
+  margin-left: 25.28px;
+}
+
+.ml-\[25px\] {
+  margin-left: 25px;
 }
 
 .ml-\[31px\] {
@@ -620,40 +628,16 @@ video {
   margin-top: 10px;
 }
 
-.mt-\[32px\] {
-  margin-top: 32px;
-}
-
-.mr-\[24px\] {
-  margin-right: 24px;
-}
-
-.mt-\[24px\] {
-  margin-top: 24px;
-}
-
-.ml-\[24px\] {
-  margin-left: 24px;
-}
-
-.ml-\[25px\] {
-  margin-left: 25px;
-}
-
-.ml-\[25\.28px\] {
-  margin-left: 25.28px;
-}
-
 .mt-\[24\.78px\] {
   margin-top: 24.78px;
 }
 
-.mt-\[64px\] {
-  margin-top: 64px;
+.mt-\[32px\] {
+  margin-top: 32px;
 }
 
-.mb-\[20px\] {
-  margin-bottom: 20px;
+.mt-\[64px\] {
+  margin-top: 64px;
 }
 
 .flex {
@@ -670,6 +654,10 @@ video {
 
 .h-\[132px\] {
   height: 132px;
+}
+
+.h-\[13px\] {
+  height: 13px;
 }
 
 .h-\[256px\] {
@@ -696,20 +684,20 @@ video {
   height: 88px;
 }
 
-.h-\[16px\] {
-  height: 16px;
-}
-
-.h-\[13px\] {
-  height: 13px;
-}
-
 .w-\[100\%\] {
   width: 100%;
 }
 
 .w-\[14px\] {
   width: 14px;
+}
+
+.w-\[16px\] {
+  width: 16px;
+}
+
+.w-\[250px\] {
+  width: 250px;
 }
 
 .w-\[312px\] {
@@ -722,14 +710,6 @@ video {
 
 .w-\[88px\] {
   width: 88px;
-}
-
-.w-\[16px\] {
-  width: 16px;
-}
-
-.w-\[250px\] {
-  width: 250px;
 }
 
 .flex-grow {
@@ -854,11 +834,6 @@ video {
      object-position: top;
 }
 
-.object-center {
-  -o-object-position: center;
-     object-position: center;
-}
-
 .px-\[8px\] {
   padding-left: 8px;
   padding-right: 8px;
@@ -890,32 +865,32 @@ video {
   line-height: 2.5rem;
 }
 
-.text-\[16px\] {
-  font-size: 16px;
-}
-
-.text-\[28px\] {
-  font-size: 28px;
-}
-
 .text-\[10px\] {
   font-size: 10px;
+}
+
+.text-\[16px\] {
+  font-size: 16px;
 }
 
 .text-\[18px\] {
   font-size: 18px;
 }
 
+.text-\[28px\] {
+  font-size: 28px;
+}
+
 .font-bold {
   font-weight: 700;
 }
 
-.leading-\[26px\] {
-  line-height: 26px;
-}
-
 .leading-\[16px\] {
   line-height: 16px;
+}
+
+.leading-\[26px\] {
+  line-height: 26px;
 }
 
 .text-\[\#69707D\] {
