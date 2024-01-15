@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link href="./output.css" rel="stylesheet">
+  <script src="./script.js"></script>
+</head>
+<body class="">
+  <div role="topBarWrapper" class="fixed bg-white sm:px-[24px] lg:px-[165px] sm:pt-[19px] lg:pt-[45px] sm:pb-[49px] left-0 right-0 top-0 sm:h-[24px] z-20">
+    <div role="topBar" class="flex items-center lg:pb-[45px] lg:border-b-[#E4E9F2] border-b-[1px]">
+        <img id="mobileMenu" src="../images/icon-menu.svg" alt="menu" class="lg:hidden">
+        <img src="../images/logo.svg" class="sm:ml-[16px] lg:ml-0" alt="logo">
+
+        <div role="desktopNav" class="sm:hidden lg:ml-[56.5px] text-[#69707D]">
+          <span class="hover:cursor-pointer hover:border-b-2 hover:border-b-[#FF7E1B]">Collections</span>
+          <span class="ml-[31px] text-[#69707D] hover:cursor-pointer hover:border-b-2 hover:border-b-[#FF7E1B]">Men</span>
+          <span class="ml-[31px] text-[#69707D] hover:cursor-pointer hover:border-b-2 hover:border-b-[#FF7E1B]">Women</span>
+          <span class="ml-[31px] text-[#69707D] hover:cursor-pointer hover:border-b-2 hover:border-b-[#FF7E1B]">About</span>
+          <span class="ml-[31px] text-[#69707D] hover:cursor-pointer hover:border-b-2 hover:border-b-[#FF7E1B]">Contact</span>
+        </div>
+
+        <div role="cartProfileWrapper" class = "flex ml-auto">
+          <div role="cartWrapper" class="relative sm:mr-[22.18px] lg:mr-[46px] flex items-center">
+            <div id="cartAmount" role="cartAmount" class="hidden absolute w-[16px] h-[13px] text-center rounded-full bg-[#FF7E1B] text-white text-[10px] leading-[16px] justify-center items-center top-[0px] right-[0px]"></div>
+            <img id="cart" src="../images/icon-cart-black.svg" class="object-contain hover:cursor-pointer">
+          </div>
+          <img src="../images/image-avatar.png" class="rounded-full sm:h-[24px] sm:w-[24px] lg:h-[50px] lg:w-[50px] hover:border-[2px] hover:border-[#FF7E1B] hover:cursor-pointer">
+        </div>
+    </div>
+  </div>
+
+  <div id="mobileNav" class="hidden flex flex-col fixed left-0 top-0 bottom-0 w-[250px] bg-white z-40">
+    <button>
+      <img id="closeMobileNav" src="../images/icon-close.svg" class="object-contain w-[16px] float-left ml-[25.28px] mt-[24.78px] hover:cursor-pointer">
+    </button>
+    <div id="mobileNavItems" class="flex flex-col justify-center mt-[64px] text-[18px] font-bold ml-[25px]">
+      <p class="mb-[20px]">Collections</p>
+      <p class="mb-[20px]">Men</p>
+      <p class="mb-[20px]">Women</p>
+      <p class="mb-[20px]">About</p>
+      <p>Contact</p>
+    </div>
+  </div>
+
+  <div id="userCart" role="userCart" class="hidden flex transition-none flex-col fixed h-[256px] sm:left-[8px] sm:right-[8px] sm:top-[76px] bg-white z-30 rounded-lg shadow-xl lg:right-[89px] lg:w-[360px] lg:top-[94px]">
+    <p class="font-bold text-[16px] pt-[24px] pl-[24px] pb-[27px] border-b-[#E4E9F2] border-b-[1px]">Cart</p>
+    
+    <div id="cartItems" class="flex items-center justify-center flex-grow">
+      <div id="emptyCartText" class=" text-center text-[#69707D] font-bold">
+        Your cart is empty
+      </div>
+
+      <div role="cartItemsDetailWrapper" id="cartItemsDetailWrapper" class="hidden w-[312px] h-[132px] flex flex-col justify-between">
+        <div role="cartItemsDetail" class="h-[52px] flex justify-between">
+          <img src="../images/image-product-1-thumbnail.jpg" class="object-contain rounded-lg h-[50px] w-[50px]">
+
+          <div role="cartItemsText" class="flex flex-col justify-self-center">
+            <p class="text-[#69707D]">Fall Limited Edition Sneakers</p>
+            <p><span class="text-[#69707D]">$125.00 x <span id="cartItemAmount"></span> </span> <b id="total"></b></p>
+          </div>
+
+          <img id="deleteButton" role="deleteButton" src="../images/icon-delete.svg" class="object-contain w-[14px]">
+        </div>
+
+        <button role="checkoutButton" class="h-[56px] bg-[#FF7E1B] text-white rounded-lg">Checkout</button>
+      </div>
+
+    </div>
+    
+  </div>
+
+  <div role="itemBodyWrapper" class="lg:flex lg:ml-[213px] lg:mr-[213px] lg:pt-[203px]">
+
+    <div role="slider-wrapper" class="relative flex flex-col">
+      
+      <div id="slider" role="slider" class="slider flex overflow-x-scroll sm:mt-[68px] sm:h-[300px] lg:h-[445px] lg:w-[445px] scroll-smooth snap-x snap-mandatory lg:rounded-2xl">
+        <img id="productImage1" src="../images/image-product-1.jpg" class="object-fill object-top snap-start">
+        <img id="productImage2" src="../images/image-product-2.jpg" class="object-fill object-top snap-start">
+        <img id="productImage3" src="../images/image-product-3.jpg" class="object-fill object-top snap-start">
+        <img id="productImage4" src="../images/image-product-4.jpg" class="object-fill object-top snap-start">
+      </div>
+
+      <button id="lSliderButton" class=" lg:hidden sm:z-10 sm:bg-white sm:rounded-full sm:h-[40px] sm:w-[40px] sm:absolute sm:left-[16px] sm:top-[50%] transform -translate-y-1/2 flex items-center justify-center">
+          <img src="../images/icon-previous.svg" alt="left arrow">
+      </button>
+      <button id="rSliderButton" class=" lg:hidden sm:z-10 sm:bg-white sm:rounded-full sm:h-[40px] sm:w-[40px] sm:absolute sm:right-[16px] sm:top-[50%] transform -translate-y-1/2 flex items-center justify-center">
+          <img src="../images/icon-next.svg" alt="right arrow">
+      </button>
+
+      <div id="thumbnail-wrapper" class="sm:hidden flex justify-between mt-[32px] h-[88px]">
+        <img id="thumbnail1" src="../images/image-product-1-thumbnail.jpg" class="thumbnail hover:cursor-pointer object-contain h-[88px] w-[88px] rounded-lg aspect-square border-[2px] border-[#FF7E1B] opacity-[75%]">
+        <img id="thumbnail2" src="../images/image-product-2-thumbnail.jpg" class="thumbnail hover:cursor-pointer object-contain h-[88px] w-[88px] rounded-lg aspect-square">
+        <img id="thumbnail3" src="../images/image-product-3-thumbnail.jpg" class="thumbnail hover:cursor-pointer object-contain h-[88px] w-[88px] rounded-lg aspect-square">
+        <img id="thumbnail4" src="../images/image-product-4-thumbnail.jpg" class="thumbnail hover:cursor-pointer object-contain h-[88px] w-[88px] rounded-lg aspect-square">
+      </div>
+
+
+    </div>
+
+    <div role="itemTextWrapper" class="lg:ml-[125px] ">
+      <p class="font-bold text-[#FF7E1B] sm:ml-[24px] sm:mt-[24px] sm:text-[12px] sm:tracking-[1.85px] lg:mt-[62px] lg:text-[13px] lg:tracking-[2px]">SNEAKER COMPANY</p>
+      <p class="font-bold sm:leading-[32px] sm:text-[28px] sm:mt-[19px] sm:ml-[24px] sm:mr-[24px] lg:mt-[24px] lg:text-[44px]">Fall Limited Edition Sneakers</p>
+      <p class="sm:text-[15px] sm:leading-[25px] text-[#69707D] sm:ml-[24px] sm:mr-[24px] sm:mt-[15px] lg:mt-[32px] lg:text-[16px] lg:leading-[26px]">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+
+      <div role="price" class="flex sm:ml-[24px] sm:mr-[24px] sm:mt-[24px] items-center lg:mt-[24px]">
+        <p class="font-bold text-[28px]">$125.00</p>
+        <span class="px-[8px] bg-[#FFEEE2] text-[#FF7E1B] font-bold rounded-md ml-[16px] text-[16px] leading-2 h-[27px] ">50%</span>
+        <p class="ml-auto lg:hidden"><s class="text-[#B6BCC8] font-bold">$250.00</s></p>
+      </div>
+
+      <div class="sm:hidden"><s class="text-[#B6BCC8] font-bold text-[16px] leading-[26px] mt-[10px]">$250.00</s></div>
+
+      <div role="barsWrapper" class="lg:flex lg:mt-[32px]">
+
+        <div role="quantityBar" class="flex justify-between sm:ml-[24px] sm:sm:mr-[24px] sm:mt-[27px] sm:h-[56px] items-center bg-[#F6F8FD] sm:pl-[24px] sm:pr-[24px] lg:px-[16px]">
+          <span id="minus" class="font-bold text-[#FF7E1B] text-4xl hover:cursor-pointer">-</span>
+          <span id="amount" class="font-bold text-[16px] lg:mx-[45.5px]">0</span>
+          <span id="add" class="font-bold text-[#FF7E1B] text-2xl hover:cursor-pointer">+</span>
+        </div>
+
+        <div class="sm:pr-[24px] sm:pl-[24px]">
+          <button id="addCart" class="flex w-[100%] justify-center sm:mt-[16px] h-[56px] items-center rounded-xl bg-[#FF7E1B] shadow-[0_10px_60px_-20px_rgba(255,126,27)] lg:w-[272px] lg:ml-[16px] active:opacity-[75%]">
+            <img src="../images/icon-cart.svg"> 
+            <span class="ml-[15.5px] text-white">Add to cart</span>
+          </button>
+        </div>
+    </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
